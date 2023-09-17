@@ -1,117 +1,115 @@
-# Git Cheat Sheet 📜
+# Git Kratka Navodila 📜
 
-Welcome to the world of Git, a powerful version control system that keeps your project organized and collaboration smooth. Below is a professional Git cheat sheet to help you navigate Git with ease, including the `git commit --amend` feature and some examples of good commit messages.
+Dobrodošli v svetu Gita, zmogljivega sistema za nadzor različic, ki ohranja vaš projekt urejen in sodelovanje nemoteno. Spodaj je profesionalen Git vodič za hitro navigacijo po Gitu, vključno z možnostjo `git commit --amend` in nekaterimi primeri dobrih sporočil za commit.
 
-## Getting Started 🚀
+## Začetek 🚀
 
-1. **Install Git** 📦
-   - Download and install Git from [git-scm.com](https://git-scm.com/downloads).
+1. **Namestite Git** 📦
+   - Prenesite in namestite Git s [git-scm.com](https://git-scm.com/downloads).
 
-2. **Configure Your Identity** 👤
-   - Set your name: `git config --global user.name "Your Name"`
-   - Set your email: `git config --global user.email "youremail@example.com"`
+2. **Nastavite svojo identiteto** 👤
+   - Nastavite svoje ime: `git config --global user.name "Vaše ime"`
+   - Nastavite svoj e-poštni naslov: `git config --global user.email "vašepošta@primer.com"`
 
-## Git Basics 📚
+## Osnove Gita 📚
 
-3. **Initialize a Repository** 🚀
-   - Create a new Git repository: `git init`
+3. **Inicializirajte repozitorij** 🚀
+   - Ustvarite nov Git repozitorij: `git init`
 
-4. **Clone a Repository** 🧬
-   - Clone an existing repository: `git clone <repository URL>`
+4. **Klonirajte repozitorij** 🧬
+   - Klonirajte obstoječi repozitorij: `git clone <URL-repozitorija>`
 
-5. **Check Status** 🧐
-   - View the status of your working directory: `git status`
+5. **Preverite stanje** 🧐
+   - Preglejte stanje vašega delovnega imenika: `git status`
 
-6. **Add Files** ➕
-   - Stage changes for commit: `git add <filename>` or `git add .` (for all changes)
+6. **Dodajte datoteke** ➕
+   - Dodajte spremembe za commit: `git add <ime-datoteke>` ali `git add .` (za vse spremembe)
 
-7. **Commit Changes** 💬
-   - Commit staged changes with a descriptive message: `git commit -m "Your commit message"`
+7. **Commit spremembe** 💬
+   - Izvedite commit z deskriptivnim sporočilom: `git commit -m "Vaše sporočilo za commit"`
 
-   Example Commit Messages:
-   - `feat: Add user registration functionality`
-   - `fix: Resolve issue with login page`
-   - `chore: Update dependencies`
-   - `docs: Improve API documentation`
-   - `style: Format code according to style guide`
-   - `refactor: Reorganize project structure`
-   - `test: Add unit tests for authentication`
+   Primeri sporočil za commit:
+   - `novo: Dodaj funkcionalnost registracije uporabnika`
+   - `popravek: Odpravite težavo z vpisno stranjo`
+   - `vzdrževanje: Posodobite odvisnosti`
+   - `dokumentacija: Izboljšajte dokumentacijo API-ja`
+   - `slog: Oblikujte kodo v skladu s slogovnim vodnikom`
+   - `preureditev: Preorganizirajte strukturo projekta`
+   - `test: Dodajte enote za preverjanje pristnosti`
 
-8. **Amend Commits with Vim ✍️**
-   - Edit the last commit message and changes interactively:
+8. **Popravite commite z Vim ✍️**
+   - Uredi zadnje sporočilo za commit in spremembe interaktivno:
 
      ```bash
      git commit --amend
      ```
 
-     This command opens the Vim text editor, allowing you to modify the commit message. Here's how to use Vim:
+     Ta ukaz odpre besedilni urejevalnik Vim in vam omogoča, da uredite sporočilo za commit. Tukaj je, kako uporabiti Vim:
 
-     - Press `i` to enter insert mode. You can now make changes to the text.
-     - Use the arrow keys to navigate to the part of the commit message you want to edit.
-     - After making your edits, press `Esc` to exit insert mode.
+     - Pritisnite `i`, da vstopite v način vstavljanja. Zdaj lahko urejate besedilo.
+     - Uporabite puščice, da se premikate na del sporočila za commit, ki ga želite urediti.
+     - Ko končate urejanje, pritisnite `Esc`, da izstopite iz načina vstavljanja.
 
-     To save your changes:
-     - Type `:w` and press `Enter`. This tells Vim to write (save) the changes.
-     - To exit Vim:
-       - Type `:q` and press `Enter` if you haven't made any changes you want to save.
-       - Type `:wq` and press `Enter` to save and exit Vim if you've made changes.
+     Da shranite spremembe:
+     - Vtipkajte `:w` in pritisnite `Enter`. S tem poveste Vimu, naj shrani (zapise) spremembe.
+     - Za izhod iz Vima:
+       - Vtipkajte `:q` in pritisnite `Enter`, če niste naredili nobenih sprememb, ki bi jih želeli shraniti.
+       - Vtipkajte `:wq` in pritisnite `Enter`, da shranite in izstopite iz Vima, če ste naredili spremembe.
 
-     Remember, Vim has a learning curve, but it's a powerful text editor once you get the hang of it.
+     Upoštevajte, da ima Vim krivuljo učenja, vendar je močno besedilno orodje, ko se ga enkrat naučite.
 
-   Make sure to follow these steps to successfully save your changes and exit Vim.
+## Veje in združevanje 🌿
 
-## Branching and Merging 🌿
+9. **Ustvarite novo vejo 🌱**
+   - Začnite novo vejo: `git branch <ime-veje>`
+   - Preklopite na vejo: `git checkout <ime-veje>`
 
-9. **Create a New Branch 🌱**
-   - Start a new branch: `git branch <branch-name>`
-   - Switch to a branch: `git checkout <branch-name>`
+10. **Združite veje 🤝**
+    - Združite vejo v trenutno vejo: `git merge <ime-veje>`
 
-10. **Merge Branches 🤝**
-    - Merge a branch into the current branch: `git merge <branch-name>`
+11. **Izbrišite vejo ❌**
+    - Izbrišite vejo (lokalno): `git branch -d <ime-veje>`
+    - Izbrišite vejo (oddaljeno): `git push origin --delete <ime-veje>`
 
-11. **Delete Branch ❌**
-    - Delete a branch (locally): `git branch -d <branch-name>`
-    - Delete a branch (remotely): `git push origin --delete <branch-name>`
+## Zgodovina in popravki 🕰️
 
-## History and Revisions 🕰️
+12. **Preglejte zgodovino commitov 📜**
+    - Preglejte zgodovino commitov: `git log`
 
-12. **View Commit History 📜**
-    - Review commit history: `git log`
+13. **Potovanje v preteklost ⏳**
+    - Preglejte določen commit: `git checkout <SHA-commita>`
 
-13. **Time Travel ⏳**
-    - Check out a specific commit: `git checkout <commit-SHA>`
+## Sodelovanje 🤝
 
-## Collaboration 🤝
+14. **Oddaljeni repozitoriji 🌐**
+    - Dodajte oddaljeni repozitorij: `git remote add origin <URL-repozitorija>`
 
-14. **Remote Repositories 🌐**
-    - Add a remote repository: `git remote add origin <repository URL>`
+15. **Potegnite zahteve 🙏**
+    - Ustvarite in pregledujte zahteve za poteg na platformah, kot so GitHub ali GitLab.
 
-15. **Pull Requests 🙏**
-    - Create and review pull requests on platforms like GitHub or GitLab.
+16. **Reševanje konfliktov 🔥**
+    - Naslovite konflikte združevanja sodelovalno.
 
-16. **Resolve Conflicts 🔥**
-    - Address merge conflicts collaboratively.
+## Popravljanje napak 🙈
 
-## Correcting Mistakes 🙈
+17. **Ponastavite commit 🔄**
+    - Razveljavite lokalne spremembe: `git reset HEAD~1`
 
-17. **Reset Commits 🔄**
-    - Uncommit local changes: `git reset HEAD~1`
+18. **Povrnite spremembe ↩️**
+    - Ustvarite nov commit za razveljavitev prejšnjih sprememb: `git revert <SHA-commita>`
 
-18. **Revert Changes ↩️**
-    - Create a new commit to undo previous changes: `git revert <commit-SHA>`
+19. **Shranite spremembe 📦**
+    - Začasno shranite spremembe za kasnejšo uporabo: `git stash`
 
-19. **Stash Changes 📦**
-    - Temporarily save changes for later: `git stash`
+## Nasveti in triki 🎩
 
-## Tips and Tricks 🎩
+20. **Psevdonimi 🐇**
+    - Nastavite bližnjice za ukaze: `git config --global alias.<ime-psevdonima> "<git-ukaz>"`
 
-20. **Aliases 🐇**
-    - Set up command shortcuts: `git config --global alias.<alias-name> "<git-command>"`
-
-21. **Interactive Rebase 🧩**
-    - Reorder, squash, and edit commits interactively: `git rebase -i <base-branch>`
+21. **Interaktivno ponovno osnovanje 🧩**
+    - Interaktivno prerazporedite, združite in uredite commitse: `git rebase -i <osnovna-veja>`
 
 22. **.gitignore 🙅**
-    - Create a .gitignore file to specify files and directories to be ignored by Git.
+    - Ustvarite datoteko .gitignore, da določite datoteke in mape, ki jih Git ignorira.
 
-Stay organized, collaborate effectively, and make the most of Git's capabilities in your projects. Git is a powerful tool when used proficiently. Happy coding! 🚀👩‍💻👨‍💻
+Ostanite organizirani, učinkovito sodelujte in izkoristite vse zmožnosti Gita v vaših projektih. Git je močno orodje, ko ga obvladate. Veselo kodiranje! 🚀👩‍💻👨‍💻
